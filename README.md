@@ -12,6 +12,11 @@ Send a formatted daily weather forecast for a configured city to Telegram, using
 
 > 🔒 **No location is hardcoded.** All config (city, token, chat ID) comes from environment variables.
 
+## 给 agent 的一句话指令:
+```bash
+请阅读 https://raw.githubusercontent.com/yiboyun/skill-weather/refs/heads/main/README.md，下载脚本并安装天气预报skill。安装依赖后，**向我询问** Telegram Bot Token、Chat ID 和城市代码，配置环境变量，测试运行，然后设置每天早上 7 点的 cron。
+```
+
 ## Prerequisites
 
 ```bash
@@ -37,9 +42,6 @@ export WEATHER_CITY_CODE="your_city_code"   # weather.com.cn 城市代码，如 
 # 测试运行
 python3 skills/weather-forecast/weather_forecast.py
 ```
-
-> **给 agent 的一句话指令**:
-> "请阅读 https://raw.githubusercontent.com/yiboyun/skill-weather/refs/heads/main/README.md，下载脚本并安装天气预报 skill。安装依赖后，**向我询问** Telegram Bot Token、Chat ID 和城市代码，配置环境变量，测试运行，然后设置每天早上 7 点的 cron。"
 
 ### One-time run
 
