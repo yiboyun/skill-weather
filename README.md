@@ -3,7 +3,7 @@ description: Use this skill to set up or run a daily weather forecast for any ci
   in China to Telegram. Triggers when the user mentions daily weather push, cron weather
   job, or wants to recreate the weather script after server migration. Fetches data
   from China Weather Network (weather.com.cn) official API and sends via Telegram bot.
-name: weather
+name: liangshan-weather
 ---
 
 # Daily Weather Forecast (天气预报)
@@ -20,7 +20,7 @@ pip install lunardate   # optional; if missing, lunar date shows "—"
 
 ## Quick Start
 
-Base URL: `https://raw.githubusercontent.com/yiboyun/skill-weather/refs/heads/main/`
+Base URL: `https://raw.githubusercontent.com/yiboyun/skill-weather/refs/heads/main`
 
 ```bash
 # 下载脚本
@@ -32,11 +32,14 @@ chmod +x skills/weather-forecast/weather_daily.sh
 # 配置环境变量（请向用户询问以下三项）
 export TELEGRAM_BOT_TOKEN="your_bot_token"
 export TELEGRAM_CHAT_ID="your_chat_id"
-export WEATHER_CITY_CODE="your_city_code"
+export WEATHER_CITY_CODE="your_city_code"   # weather.com.cn 城市代码，如 101120709
 
 # 测试运行
 python3 skills/weather-forecast/weather_forecast.py
 ```
+
+> **给 agent 的一句话指令**:
+> "请阅读 https://raw.githubusercontent.com/yiboyun/skill-weather/refs/heads/main/README.md，下载脚本并安装天气预报 skill。安装依赖后，**向我询问** Telegram Bot Token、Chat ID 和城市代码，配置环境变量，测试运行，然后设置每天早上 7 点的 cron。"
 
 ### One-time run
 
